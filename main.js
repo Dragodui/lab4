@@ -63,8 +63,6 @@ const getForecast = async () => {
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&units=metric&appid=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
-
     const forecastData = data.list;
     const forecastElement = document.createElement('div');
     forecastElement.classList.add('forecast');
